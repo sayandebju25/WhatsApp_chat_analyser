@@ -175,6 +175,10 @@ def run_chat_analyser():
     st.sidebar.title("Chat Analyser")
 
     uploaded_file = st.sidebar.file_uploader("Upload a ZIP File", type=["zip"])
+    st.write("Ensure that your ZIP file contains the required chat files exported in the 12-hour format for proper analysis")
+    st.write("Go to Settings > General > Date & Time.")
+    st.write("Turn off 24-Hour Time to switch to a 12-hour clock.")
+    st.write("Re-export the chat.")        
 
     if uploaded_file is None:
         st.info("Please upload a ZIP file.")
